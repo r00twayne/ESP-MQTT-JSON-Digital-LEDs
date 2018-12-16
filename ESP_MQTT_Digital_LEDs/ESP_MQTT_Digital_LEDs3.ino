@@ -540,6 +540,7 @@ void loop() {
     }
     showleds();
   }
+
   //EFFECT BPM
   if (effectString == "bpm") {
     uint8_t BeatsPerMinute = 62;
@@ -724,7 +725,22 @@ void loop() {
     showleds();
   }
 
-
+  //EFFECT XMAS Old School
+  if (effectString == "xmas old school") {                 //Old School Christmas Lights
+    for(int i = 0; i < NUM_LEDS-1; i++) {
+      leds(i,i+1) = CRGB::Blue;
+      leds(i,i+1) = CRGB::Black;
+      leds(i,i+1) = CRGB::Green;
+      leds(i,i+1) = CRGB::Black;
+      leds(i,i+1) = CRGB::Yellow;
+      leds(i,i+1) = CRGB::Black;
+      leds(i,i+1) = CRGB::Orange;
+      leds(i,i+1) = CRGB::Black;
+      leds(i,i+1) = CRGB::Red;
+      leds(i,i+1) = CRGB::Black;
+    }
+    showleds();
+  }
 
   //EFFECT POLICE ONE
   if (effectString == "police one") {
